@@ -1,0 +1,223 @@
+/* FOOTER */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f2e8;
+    color: #232526;
+    font-family: 'Quicksand', sans-serif;
+}
+footer {
+    background-color: #cc6100;
+    overflow: hidden;
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer img {
+    height: 180px;
+}
+
+footer h2 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+
+footer a {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+}
+
+footer a:hover {
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-container p {
+    padding: 0;
+}
+
+.footer-container h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.connect-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.connect-container img {
+    margin-right: 10px;
+    display: block;
+    height: 30px;
+}
+
+.footer-container input {
+    margin: 3px 0 0 0;
+    padding: 6px;
+    width: 310px;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid #e0e0e0;
+    border-radius: 41px;
+}
+
+.footer-container input:focus{
+  outline: none;
+}
+
+.footer-container button {
+    margin: 3px 0 0 110px;
+    padding: 6px 10px;
+    font-family: 'Quicksand', sans-serif;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 41px;
+}
+
+footer button {
+    padding: 6px 10px;
+    font-family: 'Quicksand', sans-serif;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 41px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+footer button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border-color: #ccc;
+}
+
+@media (max-width: 1024px) {
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .footer-container input {
+      width: 100%;
+      max-width: 300px;
+      margin: 3px 0;
+    }
+  
+    .footer-container button {
+      margin: 3px auto 0 auto;
+      display: block;
+    }
+}
+  
+  
+@media (max-width: 768px) {
+  .connect-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+
+  .footer-container input {
+    width: 90%;
+    max-width: 320px;
+  }
+  
+  .footer-container button {
+    width: auto;
+    margin-top: 0px;
+  }
+  
+  footer img {
+    height: 120px;
+  }
+
+  .footer-container {
+    align-items: flex-start;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+}
+  
+@media (max-width: 480px) {
+    .footer-content {
+      gap: 20px;
+    }
+  
+    .footer-container h2,
+    footer p,
+    footer a {
+      font-size: 13px;
+    }
+  
+    .footer-container input {
+      width: 100%;
+    }
+  
+    .footer-container button {
+      width: 40%;
+      margin: 2px 0 0 0;
+    }
+}
