@@ -327,6 +327,11 @@ body {
     border-radius: 16px;
   }
 
+  .search-nav-bar {
+    top: 30%;
+    transform: translate(-50%, -20%);
+  }
+
   .suggestion-container,
   .search-nav-bar .suggestion-container {
     background-color: transparent;
