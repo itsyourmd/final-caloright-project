@@ -28,6 +28,9 @@ const searchFormMobile = document.getElementById("search-form-mobile");
 // --- COMMON SUGGESTIONS ---
 const suggestions = [
   "About Us",
+  "Breakfast",
+  "Lunch",
+  "Dinner",
   "Nutrition Basics",
   "Nutritionist",
   "Calorie Calculator",
@@ -151,13 +154,17 @@ function handleSearchSubmit(event, inputEl) {
 
   const redirectMap = {
     aboutus: "/HTML/about-us.html",
+    breakfast: "/HTML/breakfast.html#breakfast",
     nutritionbasics: "/HTML/nutrition-basics.html",
     caloriecalculator: "/HTML/calculator.html",
     nutritionist: "/HTML/nutritionist.html",
     community: "/HTML/community.html",
     customerservice: "/HTML/customer-service.html",
     mealplanner: "/HTML/meal-planner.html",
-    menu: "/HTML/community"
+    menu: "/HTML/community",
+    breakfast: "/HTML/menu.html",
+    lunch: "/HTML/menu.html#lunch",
+    dinner: "/HTML/menu.html#dinner"
   };
 
   if (redirectMap[query]) {
