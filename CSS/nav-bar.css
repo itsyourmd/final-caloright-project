@@ -1,319 +1,359 @@
-:root {
-  --white: #f8f2e8;
-  --light-orange: #fe9a00;
-  --dark-orange: #cc6100;
-  --green: #7d9e1a;
-  --black: #232526;
-  --shadow: rgba(35, 37, 38, 0.25);
-  --semi-bold: 600;
-  --bold: 700;
-  --header-font: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-  --body-font: 'Quicksand', 'Poppins', 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
-  --header-size: 50px;
-  --sub-header-size: 30px;
-  --body-size: 25px;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="icon" href="./IMAGES/ICONS/caloright-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <!--Navigation Bar Start-->
 
-body {
-  overflow-x: hidden;
-  margin: 0;
-  background-color: var(--white);
-}
+    <nav class="nav-container">
+      <div class="left-items">
+        <a href="index.html" class="nav-button">
+          <img
+            src="../IMAGES/ICONS/caloright-logo.png"
+            alt="Caloright"
+            id="logo"
+          />
+        </a>
 
-/* =============== NAVIGATION =============== */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  padding: 1em 0.1em;
-  box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form"
+          >
+            <input
+              type="text"
+              id="search-input"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <!-- NAV SEARCH ICON INSERTED HERE -->
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
 
-.nav-container img,
-.search-form button img {
-  width: clamp(0.7em, 6.2vw, 2em);
-  height: auto;
-}
+          <!-- Suggestion Container -->
+          <div class="suggestion-container" id="suggestion-container">
+            <ul id="suggestions-list" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
 
-.nav-container .nav-button img:hover,
-.search-bar-container img:hover,
-.close-button:hover {
-  filter: invert(55%) sepia(96%) saturate(500%) hue-rotate(2deg) brightness(95%) contrast(100%);
-}
+      <div class="right-items">
+        <a href="./HTML/project.html" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-menu.png" alt="Menu" />
+        </a>
 
-.search-bar-container img:active,
-.close-button:active {
-  filter: invert(47%) sepia(93%) saturate(758%) hue-rotate(1deg) brightness(95%) contrast(105%);
-}
+        <a href="#" class="nav-button" id="cart-button">
+          <img src="../IMAGES/ICONS/nav-cart.png" alt="Cart" />
+        </a>
 
-.left-items,
-.right-items {
-  display: flex;
-  align-items: center;
-}
+        <a href="#" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-account.png" alt="Account" />
+        </a>
 
-.left-items {
-  margin-left: clamp(1.3em, 5vw, 2em);
-  gap: 1rem;
-}
+        <button class="nav-button mobile-search-toggle" id="search-toggle">
+          <img src="../IMAGES/ICONS/nav-search.png" alt="Search" />
+        </button>
 
-.right-items {
-  margin: 0 clamp(1rem, 6vw, 2rem) 0 clamp(1rem, 6vw, 1rem);
-  gap: 2.3em;
-}
+        <button class="nav-button hamburger-button" id="menu-toggle">
+          <img src="../IMAGES/ICONS/nav-hamburger.png" alt="Menu" />
+        </button>
+      </div>
+    </nav>
 
-.nav-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
+    <!--SLIDE MENU START-->
+    <nav class="slide-menu" id="menu">
+      <!-- Close button -->
+      <button class="close-button" id="close-menu">&times;</button>
+      <p>
+        No starving. <span style="color: #7d9e1a">Just Smart,</span
+        ><span style="color: #cc6100"> balanced meals.</span>
+      </p>
+      <ul>
+        <!-- MOBILE-ONLY ITEMS -->
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-account.png"
+              alt="Arrow icon"
+            />
+            Account
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-menu.png"
+              alt="Arrow icon"
+            />
+            Menu
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-cart.png"
+              alt="Arrow icon"
+            />
+            Cart
+          </a>
+        </li>
 
-#logo {
-  width: clamp(90px, 15vw, 110px);
-  height: auto;
-}
+        <!-- ALL SCREEN ITEMS -->
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-calculator.png"
+              alt="Arrow icon"
+            />
+            Calorie Calculator
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutrition-basics.png"
+              alt="Arrow icon"
+            />
+            Nutrition Basics
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutritionist.png"
+              alt="Arrow icon"
+            />
+            Nutritionist
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--SLIDE MENU END-->
 
-/* =============== SEARCH BAR =============== */
-.search-bar-container,
-.search-nav-bar .search-form,
-.search-nav-bar .search-bar-container {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-  position: relative;
-  bottom: 0.5em;
-  box-sizing: border-box;
-}
+    <!-- existing desktop block above… -->
 
-.search-form {
-  display: flex;
-  align-items: center;
-  background-color: var(--white);
-  box-shadow: 1px 1px 30px 0.5px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-  width: 320px;
-  padding: 0.4rem 0.5rem;
-  position: relative;
-  top: 5px;
-}
+    <div class="search-background">
+      <nav class="search-nav-bar">
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form-mobile"
+          >
+            <input
+              type="text"
+              id="search-input-mobile"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
 
-.search-form input {
-  flex: 1;
-  border: none;
-  font-size: 17px;
-  font-family: var(--header-font);
-  background-color: var(--white);
-}
+          <!-- MOBILE SUGGESTION Container -->
+          <div class="suggestion-container" id="suggestion-container-mobile">
+            <ul id="suggestions-list-mobile" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-.search-form input:focus {
-  outline: none;
-}
+    <!--Navigation Bar End-->
 
-.search-form button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+    <!--Carousel Start-->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-1.png"
+          class="carousel-slide"
+          alt="1"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-2.png"
+          class="carousel-slide"
+          alt="2"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-3.png"
+          class="carousel-slide"
+          alt="3"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-4.png"
+          class="carousel-slide"
+          alt="4"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-5.png"
+          class="carousel-slide"
+          alt="4"
+        />
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+      <div class="carousel-indicators"></div>
+    </div>
+    <!-- Carousel End -->
 
-.suggestion-container,
-.search-nav-bar .suggestion-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: var(--header-font);
-  display: none;
-  z-index: 1000;
-}
+    <!-- GRAPHIC 1 START -->
+    <div class="outer-image-container">
+      <div class="inner-image-container">
+        <div class="index-button">
+          <p>
+            We don't label food as good or bad.
+            <span style="color: #7d9e1a; font-weight: bold">
+              We love it all!</span
+            >
+          </p>
+          <a href="menu.html">Menu</a>
+        </div>
+        <img
+          src="./IMAGES/BANNERS/index-image-1.png"
+          alt="Burger and Salad Picture"
+        />
+      </div>
+    </div>
+    <!-- GRAPHIC 1 END -->
 
-.suggestions-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    <p class="text-header text-center">SPECIALIZE TOOLS MADE JUST FOR YOU!</p>
 
-.suggestions-list li {
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
+    <!--GRID FEATURE CONTAINER START-->
 
-.suggestions-list li:hover {
-  color: var(--light-orange);
-  font-weight: var(--semi-bold);
-}
+    <div class="features">
+      <div class="feature-container">
+        <div id="calculator-container">
+          <p class="feature-title">Calorie Calculator</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
 
-.suggestions-list li.selected {
-  background: none;
-}
+          <div class="image-button-container" id="calculator">
+            <img src="./IMAGES/ICONS/index-image-1.png" alt="Calculator" />
+            <a href="/HTML/calculator.html">Count</a>
+          </div>
+        </div>
 
-.search-nav-bar {
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  justify-content: center;
-  padding: 2em;
-}
+        <div id="planner-container">
+          <p class="feature-title">Meal Planner</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
 
-.mobile-search-toggle {
-  display: none;
-}
+          <div class="image-button-container" id="planner">
+            <img src="./IMAGES/ICONS/index-image-2.png" alt="Planner" />
+            <a href="#">Plan</a>
+          </div>
+        </div>
 
-/* =============== SLIDE MENU =============== */
-.slide-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: clamp(18em, 20vw, 20em);
-  height: 100vh;
-  background-color: var(--white);
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-  font-family: var(--body-font);
-  font-weight: var(--bold);
-  padding: 20px;
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-  transform: translateX(100%);
-  overflow-y: auto;
-}
+        <div id="nutrition-container">
+          <p class="feature-title">Nutrition Basics</p>
+          <div class="feature-description">
+            We always believe that knowledge is key to getting fit.
+          </div>
+          <div class="image-button-container">
+            <img src="./IMAGES/ICONS/index-image-3.png" alt="Knowledge" />
+            <a href="#">Learn</a>
+          </div>
+        </div>
+      </div>
 
-.slide-menu.active {
-  transform: translateX(0);
-}
+      <div class="feature-container">
+        <div id="nutritionist-container">
+          <p class="feature-title">Nutritionist</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
 
-.slide-menu p {
-  font-size: clamp(20px, 3vw, 23px);
-  font-family: var(--header-font);
-  text-align: center;
-  margin-top: 60px;
-}
+          <div class="image-button-container">
+            <img
+              src="./IMAGES/ICONS/index-image-5.png"
+              alt="Nutritionist"
+              id="nutrition-image"
+            />
+            <a href="#">Consult</a>
+          </div>
+        </div>
 
-.close-button {
-  background: none;
-  font-size: 50px;
-  color: var(--black);
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  cursor: pointer;
-  border: none;
-}
+        <div id="community-container">
+          <p class="feature-title">Community</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
 
-.slide-menu ul {
-  list-style: none;
-  margin: 30px 0 0;
-  padding: 0;
-}
+          <div class="image-button-container">
+            <img src="./IMAGES/ICONS/index-image-6.png" alt="Calculator" />
+            <a href="#">Engage</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--GRID FEATURE CONTAINER END-->
 
-.slide-menu li {
-  padding: 10px 0;
-}
+    <p class="text-header text-center">
+      <span style="color: #232526">No starving.</span>
+      <span style="color: #7d9e1a">Just smart, <br /></span>balanced meals.
+    </p>
 
-.slide-menu li a {
-  text-decoration: none;
-  color: var(--black);
-  font-family: var(--body-font);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    <div id="download-container">
+      <img src="/IMAGES/BANNERS/index-smartphone.png" alt="Smartphone" />
 
-.slide-menu li a:hover {
-  color: var(--light-orange);
-  font-weight: var(--bold);
-}
+      <div id="download-details-container">
+        <p class="text-header text-center">Download Now!</p>
+        <p class="text-body">Available on:</p>
 
-.slide-menu li a:active {
-  color: var(--dark-orange);
-}
+        <div id="apps-container">
+          <a
+            href="https://play.google.com/store/apps?hl=en&pli=1 target=_blank"
+            target="_blank"
+          >
+            <img src="/IMAGES/ICONS/index-playstore.png" alt="Playstore" />
+          </a>
+          <a href="https://www.apple.com/ph/app-store/" target="_blank">
+            <img src="/IMAGES/ICONS/index-appstore.png" alt="App store" />
+          </a>
+        </div>
+      </div>
+    </div>
 
-.slide-menu img {
-  width: 25px;
-  height: auto;
-}
+    <div class="service-container">
+      <p class="text-header">Customer Service</p>
+      <a href="#" class="button">Help</a>
+    </div>
 
-/* =============== RESPONSIVE =============== */
-@media (max-width: 800px) {
-  .right-items > a:not(.hamburger-button),
-  .right-items > #cart-button {
-    display: none;
-  }
-
-  .slide-menu.open #mobile-cart-container #cart-button {
-    display: inline-flex;
-    margin-top: 10px;
-  }
-  
-  .search-form {
-    width: 500px;
-  }
-
-  .search-form input {
-    font-family: var(--header-font);
-  }
-
-
-  .right-items {
-    gap: 1.2rem;
-  }
-
-  .search-bar-container {
-    display: none;
-  }
-
-  .search-nav-bar.active {
-    display: flex;
-  }
-
-  .mobile-search-toggle {
-    display: inline-block;
-  }
-
-  .search-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1500;
-    display: none;
-  }
-
-  .search-background.active {
-    display: block;
-  }
-
-  .search-form,
-  .suggestions-list {
-    position: relative;
-    top: -100px;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 16px;
-  }
-
-  .search-form:focus-within,
-  .suggestions-list {
-    box-shadow: 1px 1px 1000px 20px rgba(204, 97, 0, 0.6);
-  }
-
-  .search-nav-bar {
-    top: 30%;
-    transform: translate(-50%, -20%);
-  }
-
-  .suggestion-container,
-  .search-nav-bar .suggestion-container {
-    background-color: transparent;
-  }
-}
+    <!--JAVA SCRIPT SECTION-->
+    <script src="/JS/nav-bar.js"></script>
+    <script src="/JS/index.js"></script>
+  </body>
+</html>
