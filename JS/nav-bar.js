@@ -27,11 +27,15 @@ const searchFormMobile = document.getElementById("search-form-mobile");
 
 // --- COMMON SUGGESTIONS ---
 const suggestions = [
+  "About Us",
   "Nutrition Basics",
-  "Calorie Calculator",
   "Nutritionist",
-  "Date",
-  "Grapes",
+  "Calorie Calculator",
+  "Community",
+  "Customer Service",
+  "Meal Planner",
+  "Menu",
+
 ];
 
 function normalize(text) {
@@ -146,11 +150,14 @@ function handleSearchSubmit(event, inputEl) {
   const query = normalize(queryRaw);
 
   const redirectMap = {
-    nutritionbasics: "./nutrition-basics.html",
-    caloriecalculator: "../calorie-calculator.html",
-    nutritionist: "../nutritionist.html",
-    date: "../date.html",
-    grapes: "../grapes.html",
+    aboutus: "/HTML/about-us.html",
+    nutritionbasics: "/HTML/nutrition-basics.html",
+    caloriecalculator: "/HTML/calculator.html",
+    nutritionist: "/HTML/nutritionist.html",
+    community: "/HTML/community.html",
+    customerservice: "/HTML/customer-service.html",
+    mealplanner: "/HTML/meal-planner.html",
+    menu: "/HTML/community"
   };
 
   if (redirectMap[query]) {
