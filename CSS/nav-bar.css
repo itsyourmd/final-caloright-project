@@ -60,7 +60,7 @@ body {
 }
 
 .right-items {
-  margin: 0 clamp(1rem, 6vw, 1.5rem) 0 clamp(1rem, 6vw, 2rem);
+  margin: 0 clamp(1rem, 6vw, 2rem) 0 clamp(1rem, 6vw, 1rem);
   gap: 2.3em;
 }
 
@@ -86,7 +86,6 @@ body {
   position: relative;
   bottom: 0.5em;
   box-sizing: border-box;
-  margin-right: 0.5vw;
 }
 
 .search-form {
@@ -265,7 +264,6 @@ body {
 
   .right-items {
     gap: 1.2rem;
-    margin-right: 2rem;
   }
 
   .search-bar-container {
