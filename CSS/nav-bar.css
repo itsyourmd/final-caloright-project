@@ -26,7 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 1em 0.1em 0.5em;
+  padding: 1em 0.1em 1em;
   box-sizing: border-box;
   margin-top: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,6 @@ body {
   margin-right: clamp(1rem,6vw, 3rem);
   gap: 2.5em;
   position: relative;
-  bottom: 0.5em;
 }
 
 
@@ -76,12 +75,12 @@ body {
 }
 
 #logo {
-  width: 120px;
-  margin-bottom: 1.5em;
+  width: clamp(90px, 15vw, 110px);
+  height: auto;
 }
 
 /* ================ SEARCH BAR ================ */
-.search-bar-container,
+.search-bar-container
 .search-nav-bar .search-form,
 .search-nav-bar .search-bar-container {
   display: flex;
@@ -307,7 +306,7 @@ body {
   }
 
   .search-form,.suggestions-list{
-    position: relative;
+    position: absolute;
     top: -100px; 
     box-shadow: 1px 1px 1000px 20px rgba(204, 97, 0, 0.6);
     color: white;
