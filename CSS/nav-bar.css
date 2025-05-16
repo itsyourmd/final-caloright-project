@@ -241,6 +241,10 @@ body {
   height: auto;
 }
 
+.mobile-only {
+  display: none;
+}
+
 /* =============== RESPONSIVE =============== */
 @media (max-width: 800px) {
   .right-items > a:not(.hamburger-button),
@@ -259,6 +263,10 @@ body {
 
   .search-form input {
     font-size: 15px;
+  }
+
+  .mobile-only {
+    display: block;
   }
 
 
