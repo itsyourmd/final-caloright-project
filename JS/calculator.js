@@ -91,3 +91,26 @@ function calculateCalories() {
 
 /* CALORIE CALCULATOR END */
 
+
+
+/* CALCULATO GLOW START */
+const calculator = document.getElementById('calculator-container');
+const body = document.body;
+const calculateButton = document.querySelector('.calculate-button button');
+
+
+calculator.addEventListener('focusin', () => {
+
+  calculator.classList.add('glowing');
+  body.classList.add('dimmed-background');
+});
+
+
+calculateButton.addEventListener('click', () => {
+
+  calculator.classList.remove('glowing');
+  body.classList.remove('dimmed-background');
+});
+
+/* CALCULATO GLOW END */
+
