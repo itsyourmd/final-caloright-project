@@ -27,7 +27,7 @@ body{
 #text-display {
   color: var(--black);
   font-family: var(--header-font);
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
 
@@ -112,6 +112,19 @@ body{
   text-align: center;
   margin: 0;
 }
+
+/* Glow effect */
+.glowing {
+  box-shadow: 1px 1px 1000px 20px rgba(204, 97, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Dim the background */
+.dimmed-background {
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darken the background */
+  transition: background-color 0.3s ease;
+}
+
 
 /* Form styling */
 #calculator-container fieldset {
