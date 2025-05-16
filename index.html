@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/index.css" />
     <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="stylesheet" href="/CSS/footer.css" />
     <link rel="icon" href="./IMAGES/ICONS/caloright-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -352,8 +353,90 @@
       <a href="#" class="button">Help</a>
     </div>
 
+    <!-- FOOTER SECTION -->
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <img
+            src="../IMAGES/LOGOS/caloright-logo-white.png"
+            alt="CaloRight Logo"
+          />
+          <p>© 2025 CaloRight. All rights reserved.</p>
+          <p>Made with &hearts; in the Philippines</p>
+        </div>
+
+        <section class="footer-container">
+          <h2>CONNECT</h2>
+          <div class="connect-container">
+            <img src="../IMAGES/ICONS/email-icon.png" alt="Email Icon" />
+            <a href="#">
+              <p>calo-right@gmail.com</p>
+            </a>
+          </div>
+          <div class="connect-container">
+            <img src="../IMAGES/ICONS/phone-icon.png" alt="Phone Icon" />
+            <a href="#">
+              <p>+63 917 123 4567</p>
+            </a>
+          </div>
+          <div class="connect-container">
+            <img src="../IMAGES/ICONS/facebook-icon.png" alt="Facebook Icon" />
+            <a href="#">
+              <p>CaloRight</p>
+            </a>
+          </div>
+          <div class="connect-container">
+            <img
+              src="../IMAGES/ICONS/community-icon.png"
+              alt="Community Icon"
+            />
+            <a href="../HTML/community-page.html">
+              <p><strong>Join Our Community!</strong></p>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer-container">
+          <h2>SERVICE</h2>
+          <a href="../HTML/menu-page.html">View Menu</a>
+          <a href="../HTML/nutritionist-consultation-page.html"
+            >Nutritionist Consultation</a
+          >
+          <a href="../HTML/calorie-calculator-page.html">Calorie Calculator</a>
+
+          <h2>SUPPORT</h2>
+          <a href="../HTML/customer-service-page.html">Customer Service</a>
+          <a href="../HTML/privacy-policy-page.html">Privacy Policy</a>
+          <a href="../HTML/terms-and-conditions-page.html"
+            >Terms & Conditions</a
+          >
+          <a href="../HTML/promos-and-discounts-page.html"
+            >Promos & Discounts</a
+          >
+        </section>
+
+        <section class="footer-container">
+          <h2>NEWSLETTER</h2>
+          <p class="subscribe-description">
+            Start your healthy journey now. <strong>Subscribe today!</strong>
+          </p>
+          <input
+            type="email"
+            id="newsletter-email"
+            placeholder="Email Address"
+          />
+          <button id="subscribe-btn" onclick="subscribeNewsletter()">
+            Subscribe
+          </button>
+        </section>
+      </div>
+    </footer>
+
     <!--JAVA SCRIPT SECTION-->
-    <script src="/JS/nav-bar.js"></script>
+
     <script src="/JS/index.js"></script>
+    <script src="/JS/nav-bar.js"></script>
+    <script src="/JS/footer.js"></script>
   </body>
 </html>
