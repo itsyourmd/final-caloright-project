@@ -254,11 +254,11 @@ body {
   }
   
   .search-form {
-    width: 350px;
+    width: 340px;
   }
 
   .search-form input {
-    font-family: var(--header-font);
+    font-size: 15px;
   }
 
 
