@@ -310,8 +310,7 @@ body {
     border-radius: 16px;
   }
 
-  .search-form:focus-within,
-  .suggestions-list {
+  .search-form:focus-within{
     box-shadow: 1px 1px 1000px 20px rgba(204, 97, 0, 0.6);
   }
 
