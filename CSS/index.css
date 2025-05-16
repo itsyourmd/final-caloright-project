@@ -218,7 +218,7 @@ body {
   text-decoration: none;
   color: var(--dark-orange);
   font-family: var(--header-font);
-  font-size: clamp(20px, 3vw, 23px);
+  font-size: clamp(16px, 3vw, 23px);
   font-weight: var(--semi-bold);
   text-align: center;
 }
@@ -260,13 +260,14 @@ body {
 }
 
 #nutrition-image {
-  width: clamp(90px, 20vw, 270px);
+  width: clamp(130px, 20vw, 270px);
   height: auto;
 }
 
 .image-button-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(1rem, 2vw, 1.5rem);
 }
 
@@ -302,7 +303,6 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
 }
-
 
 #download-container {
   display: flex;
@@ -424,9 +424,6 @@ body {
     justify-content: center;
   }
 
-  .carousel-button{
-    display: none;
-  }
 }
 
 @media (max-width: 1300px) {
