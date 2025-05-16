@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="icon" href="./IMAGES/ICONS/caloright-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <!--Navigation Bar Start-->
+
+    <nav class="nav-container">
+      <div class="left-items">
+        <a href="index.html" class="nav-button">
+          <img
+            src="../IMAGES/ICONS/caloright-logo.png"
+            alt="Caloright"
+            id="logo"
+          />
+        </a>
+
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form"
+          >
+            <input
+              type="text"
+              id="search-input"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <!-- NAV SEARCH ICON INSERTED HERE -->
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- Suggestion Container -->
+          <div class="suggestion-container" id="suggestion-container">
+            <ul id="suggestions-list" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-items">
+        <a href="./HTML/project.html" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-menu.png" alt="Menu" />
+        </a>
+
+        <a href="#" class="nav-button" id="cart-button">
+          <img src="../IMAGES/ICONS/nav-cart.png" alt="Cart" />
+        </a>
+
+        <a href="#" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-account.png" alt="Account" />
+        </a>
+
+        <button class="nav-button mobile-search-toggle" id="search-toggle">
+          <img src="../IMAGES/ICONS/nav-search.png" alt="Search" />
+        </button>
+
+        <button class="nav-button hamburger-button" id="menu-toggle">
+          <img src="../IMAGES/ICONS/nav-hamburger.png" alt="Menu" />
+        </button>
+      </div>
+    </nav>
+
+    <!--SLIDE MENU START-->
+    <nav class="slide-menu" id="menu">
+      <!-- Close button -->
+      <button class="close-button" id="close-menu">&times;</button>
+      <p>
+        No starving. <span style="color: #7d9e1a">Just Smart,</span
+        ><span style="color: #cc6100"> balanced meals.</span>
+      </p>
+      <ul>
+        <!-- MOBILE-ONLY ITEMS -->
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-account.png"
+              alt="Arrow icon"
+            />
+            Account
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-menu.png"
+              alt="Arrow icon"
+            />
+            Menu
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-cart.png"
+              alt="Arrow icon"
+            />
+            Cart
+          </a>
+        </li>
+
+        <!-- ALL SCREEN ITEMS -->
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-calculator.png"
+              alt="Arrow icon"
+            />
+            Calorie Calculator
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutrition-basics.png"
+              alt="Arrow icon"
+            />
+            Nutrition Basics
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutritionist.png"
+              alt="Arrow icon"
+            />
+            Nutritionist
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--SLIDE MENU END-->
+
+    <!-- existing desktop block above… -->
+
+    <div class="search-background">
+      <nav class="search-nav-bar">
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form-mobile"
+          >
+            <input
+              type="text"
+              id="search-input-mobile"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- MOBILE SUGGESTION Container -->
+          <div class="suggestion-container" id="suggestion-container-mobile">
+            <ul id="suggestions-list-mobile" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--Navigation Bar End-->
+
+    <!--Carousel Start-->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-1.png"
+          class="carousel-slide"
+          alt="1"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-2.png"
+          class="carousel-slide"
+          alt="2"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-3.png"
+          class="carousel-slide"
+          alt="3"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-4.png"
+          class="carousel-slide"
+          alt="4"
+        />
+        <img
+          src="./IMAGES/BANNERS/index-carousel-image-5.png"
+          class="carousel-slide"
+          alt="4"
+        />
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+      <div class="carousel-indicators"></div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- GRAPHIC 1 START -->
+    <div class="outer-image-container">
+      <div class="inner-image-container">
+        <div class="index-button">
+          <p>
+            We don't label food as good or bad.
+            <span style="color: #7d9e1a; font-weight: bold">
+              We love it all!</span
+            >
+          </p>
+          <a href="menu.html">Menu</a>
+        </div>
+        <img
+          src="./IMAGES/BANNERS/index-image-1.png"
+          alt="Burger and Salad Picture"
+        />
+      </div>
+    </div>
+    <!-- GRAPHIC 1 END -->
+
+    <p class="text-header text-center">SPECIALIZE TOOLS MADE JUST FOR YOU!</p>
+
+    <!--GRID FEATURE CONTAINER START-->
+
+    <div class="features">
+      <div class="feature-container">
+        <div id="calculator-container">
+          <p class="feature-title">Calorie Calculator</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
+
+          <div class="image-button-container" id="calculator">
+            <img src="./IMAGES/ICONS/index-image-1.png" alt="Calculator" />
+            <a href="/HTML/calculator.html">Count</a>
+          </div>
+        </div>
+
+        <div id="planner-container">
+          <p class="feature-title">Meal Planner</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
+
+          <div class="image-button-container" id="planner">
+            <img src="./IMAGES/ICONS/index-image-2.png" alt="Planner" />
+            <a href="#">Plan</a>
+          </div>
+        </div>
+
+        <div id="nutrition-container">
+          <p class="feature-title">Nutrition Basics</p>
+          <div class="feature-description">
+            We always believe that knowledge is key to getting fit.
+          </div>
+          <div class="image-button-container">
+            <img src="./IMAGES/ICONS/index-image-3.png" alt="Knowledge" />
+            <a href="#">Learn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-container">
+        <div id="nutritionist-container">
+          <p class="feature-title">Nutritionist</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
+
+          <div class="image-button-container">
+            <img
+              src="./IMAGES/ICONS/index-image-5.png"
+              alt="Nutritionist"
+              id="nutrition-image"
+            />
+            <a href="#">Consult</a>
+          </div>
+        </div>
+
+        <div id="community-container">
+          <p class="feature-title">Community</p>
+          <p class="feature-description">
+            Healthy lifestyle made easy—no food sacrifices.
+          </p>
+
+          <div class="image-button-container">
+            <img src="./IMAGES/ICONS/index-image-6.png" alt="Calculator" />
+            <a href="#">Engage</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--GRID FEATURE CONTAINER END-->
+
+    <p class="text-header text-center">
+      <span style="color: #232526">No starving.</span>
+      <span style="color: #7d9e1a">Just smart, <br /></span>balanced meals.
+    </p>
+
+    <div id="download-container">
+      <img src="/IMAGES/BANNERS/index-smartphone.png" alt="Smartphone" />
+
+      <div id="download-details-container">
+        <p class="text-header text-center">Download Now!</p>
+        <p class="text-body">Available on:</p>
+
+        <div id="apps-container">
+          <a
+            href="https://play.google.com/store/apps?hl=en&pli=1 target=_blank"
+            target="_blank"
+          >
+            <img src="/IMAGES/ICONS/index-playstore.png" alt="Playstore" />
+          </a>
+          <a href="https://www.apple.com/ph/app-store/" target="_blank">
+            <img src="/IMAGES/ICONS/index-appstore.png" alt="App store" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-container">
+      <p class="text-header">Customer Service</p>
+      <a href="#" class="button">Help</a>
+    </div>
+
+    <!--JAVA SCRIPT SECTION-->
+    <script src="/JS/nav-bar.js"></script>
+    <script src="/JS/index.js"></script>
+  </body>
+</html>

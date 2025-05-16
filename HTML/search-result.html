@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/nav-bar.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="left-items">
+        <a href="index.html" class="nav-button">
+          <img
+            src="../IMAGES/ICONS/caloright-logo.png"
+            alt="Caloright"
+            id="logo"
+          />
+        </a>
+
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form"
+          >
+            <input
+              type="text"
+              id="search-input"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- Suggestion Container -->
+          <div class="suggestion-container" id="suggestion-container">
+            <ul id="suggestions-list" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-items">
+        <a href="./HTML/project.html" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-menu.png" alt="Menu" />
+        </a>
+
+        <a href="#" class="nav-button" id="cart-button">
+          <img src="../IMAGES/ICONS/nav-cart.png" alt="Cart" />
+        </a>
+
+        <a href="#" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-account.png" alt="Account" />
+        </a>
+
+        <button class="nav-button hamburger-btn" id="menu-toggle">
+          <img src="../IMAGES/ICONS/nav-hamburger.png" alt="Menu" />
+        </button>
+      </div>
+    </nav>
+
+    <!-- Slide-out Menu (outside nav-container) -->
+
+    <nav class="slide-menu" id="menu">
+      <!-- Close button -->
+      <button class="close-btn" id="close-menu">&times;</button>
+
+      <div>
+        <p>CALORIES HI!</p>
+      </div>
+      <ul>
+        <!-- MOBILE-ONLY ITEMS -->
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-account.png"
+              alt="Arrow icon"
+            />
+            Account
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-menu.png"
+              alt="Arrow icon"
+            />
+            Menu
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-cart.png"
+              alt="Arrow icon"
+            />
+            Cart
+          </a>
+        </li>
+
+        <!-- ALL SCREEN ITEMS -->
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/calorie-calculator-icon.png"
+              alt="Arrow icon"
+            />
+            Calorie Calculator
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nutrition-basics-icon.png"
+              alt="Arrow icon"
+            />
+            Nutrition Basics
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nutritionist-icon.png"
+              alt="Arrow icon"
+            />
+            Nutritionist
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <p>NO RESULT FOUND</p>
+
+    <!--JAVA SCRIPT SECTION-->
+    <script src="../JS/nav-bar.js"></script>
+  </body>
+</html>

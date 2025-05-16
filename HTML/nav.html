@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/nav-bar.css" />
+    <link rel="icon" href="../IMAGES/ICONS/caloright-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>NavBar</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="left-items">
+        <a href="index.html" class="nav-button">
+          <img
+            src="../IMAGES/ICONS/caloright-logo.png"
+            alt="Caloright"
+            id="logo"
+          />
+        </a>
+
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form"
+          >
+            <input
+              type="text"
+              id="search-input"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <!-- NAV SEARCH ICON INSERTED HERE -->
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- Suggestion Container -->
+          <div class="suggestion-container" id="suggestion-container">
+            <ul id="suggestions-list" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-items">
+        <a href="./HTML/project.html" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-menu.png" alt="Menu" />
+        </a>
+
+        <a href="#" class="nav-button" id="cart-button">
+          <img src="../IMAGES/ICONS/nav-cart.png" alt="Cart" />
+        </a>
+
+        <a href="#" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-account.png" alt="Account" />
+        </a>
+
+        <button class="nav-button mobile-search-toggle" id="search-toggle">
+          <img src="../IMAGES/ICONS/nav-search.png" alt="Search" />
+        </button>
+
+        <button class="nav-button hamburger-button" id="menu-toggle">
+          <img src="../IMAGES/ICONS/nav-hamburger.png" alt="Menu" />
+        </button>
+      </div>
+    </nav>
+
+    <!--SLIDE MENU START-->
+    <nav class="slide-menu" id="menu">
+      <!-- Close button -->
+      <button class="close-button" id="close-menu">&times;</button>
+      <p>
+        No starving. <span style="color: #7d9e1a">Just Smart,</span
+        ><span style="color: #cc6100"> balanced meals.</span>
+      </p>
+      <ul>
+        <!-- MOBILE-ONLY ITEMS -->
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-account.png"
+              alt="Arrow icon"
+            />
+            Account
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-menu.png"
+              alt="Arrow icon"
+            />
+            Menu
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-cart.png"
+              alt="Arrow icon"
+            />
+            Cart
+          </a>
+        </li>
+
+        <!-- ALL SCREEN ITEMS -->
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-calculator.png"
+              alt="Arrow icon"
+            />
+            Calorie Calculator
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutrition-basics.png"
+              alt="Arrow icon"
+            />
+            Nutrition Basics
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutritionist.png"
+              alt="Arrow icon"
+            />
+            Nutritionist
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--SLIDE MENU END-->
+
+    <!-- existing desktop block above… -->
+
+    <div class="search-background">
+      <nav class="search-nav-bar">
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form-mobile"
+          >
+            <input
+              type="text"
+              id="search-input-mobile"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- MOBILE SUGGESTION Container -->
+          <div class="suggestion-container" id="suggestion-container-mobile">
+            <ul id="suggestions-list-mobile" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--JAVA SCRIPT SECTION-->
+    <script src="../JS/nav-bar.js"></script>
+  </body>
+</html>

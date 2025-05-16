@@ -1,0 +1,431 @@
+:root {
+  --white: #f8f2e8;
+  --light-orange: #fe9a00;
+  --dark-orange: #cc6100;
+  --green: #7d9e1a;
+  --black: #232526;
+  --shadow: rgba(35, 37, 38, 0.25);
+  --semi-bold: 600;
+  --bold: 700;
+  --header-font: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --body-font: 'Quicksand', 'Poppins', 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
+  --header-size: 50px;
+  --sub-header-size: 30px;
+  --body-size: 25px;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+.text-header {
+  font-size: clamp(25px, 6vw, 50px);
+  font-weight: var(--bold);
+  font-family: var(--header-font);
+  color: var(--dark-orange);
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+.text-body{
+  font-size: clamp(17px, 3vw, 25px);
+  font-weight: var(--semi-bold);
+  font-family: var(--body-font);
+  color: var(--black);
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 40%;   
+}
+
+.carousel-track {
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--green);
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--white);
+  color: var(--light-orange);
+  border: none;
+  font-size: 2rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 15px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.carousel-button.prev {
+  left: 30px;
+}
+
+.carousel-button.next {
+  right: 30px;
+}
+
+.carousel-button:hover {
+  background: var(--light-orange);
+  color: var(--white);
+}
+
+.carousel-button:active {
+  background: var(--dark-orange);
+  color: var(--white);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background-color: var(--dark-orange);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: var(--white);
+}
+
+/*home-image-container Start*/
+.outer-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.inner-image-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.index-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 0.5rem; 
+}
+
+.inner-image-container p {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-family: var(--header-font);
+  text-align: justify;
+  margin: 0;
+}
+
+.inner-image-container img {
+  width: clamp(700px, 40vw, 1000px);
+  height: auto;
+  max-width: 100%;
+}
+
+.outer-image-container a {
+  display: inline-block;
+  padding: 0.50rem 1.3rem; 
+  min-width: 3px; 
+  max-width: 100px; 
+  font-size: clamp(1.5rem, 2vw, 5rem); 
+  font-family: var(--body-font);
+  font-weight: var(--semi-bold);
+  border: 3px solid var(--dark-orange);
+  border-radius: 2rem; 
+  color: var(--dark-orange);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.outer-image-container a:hover {
+  background-color: var(--dark-orange);
+  color: var(--white);
+}
+
+.outer-image-container a:active {
+  background-color: var(--light-orange);
+  border-color: var(--light-orange);
+  color: var(--white);
+}
+
+.feature-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 5vw; 
+  margin-right: 5vw; 
+  margin-bottom: 1rem;
+}
+
+.feature-container a {
+  box-sizing: border-box;
+  width: clamp(60px, 26vw, 120px);
+  padding: clamp(0.4rem, 1vw, 0.6rem)
+           clamp(0.3rem, 3vw, 0.7rem);
+  border: 3px solid var(--dark-orange);
+  border-radius: clamp(2rem, 2vw, 3rem);
+  text-decoration: none;
+  color: var(--dark-orange);
+  font-family: var(--header-font);
+  font-size: clamp(20px, 3vw, 23px);
+  font-weight: var(--semi-bold);
+  text-align: center;
+}
+
+.feature-container a:hover{
+  background-color: var(--dark-orange);
+  color: var(--white);
+}
+
+.feature-container a:active{
+  background-color: var(--light-orange);
+  color: var(--white);
+  border: var(--light-orange);
+}
+
+.feature-title {
+  color: var(--dark-orange);
+  font-family: var(--header-font);
+  font-size: clamp(25px, 2vw, 28px);
+  font-weight: var(--bold);
+  margin:0;
+  
+}
+
+.feature-description {
+  margin: 0 2vw;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 95%;
+}
+
+#calculator-container img,
+#planner-container img,
+.image-button-container img {
+  margin-top: 2vw;
+  width: clamp(90px, 15vw, 160px);
+  height: auto;
+}
+
+#nutrition-image {
+  width: clamp(90px, 20vw, 270px);
+  height: auto;
+}
+
+.image-button-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+#calculator-container,
+#planner-container,
+#community-container,
+#nutrition-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 4px solid var(--dark-orange);
+  border-radius: clamp(15px, 15vw, 25px);
+  padding: 2vw;
+  width: clamp(150px, 25vw, 400px); 
+  height: clamp(150px, 25vw, 300px);
+  gap: 1vw;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#nutritionist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 4px solid var(--dark-orange);
+  border-radius: clamp(15px, 15vw, 25px);
+  padding: 2vw;
+  width: calc(2 * clamp(213px, 28vw, 450px));  
+  height: clamp(200px, 25vw, 300px);
+  gap: 1vw;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+
+#download-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+#download-container img {
+  height: clamp(200px, 20vw, 300px);
+  width: auto;
+}
+
+#download-container p {
+  margin: 0; 
+}
+
+#download-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  margin-left: 15px; 
+}
+
+#download-details-container a img {
+  height: clamp(30px, 15vw, 60px);
+  width: auto;
+}
+
+#apps-container {
+  margin-top: 1vw;
+  display: flex;
+  gap: 1vw;
+}
+
+#apps-container a img:hover {
+  filter: brightness(80%); 
+}
+
+#apps-container a img:active {
+  filter: brightness(85%); 
+}
+
+/*home-image-container End*/
+
+
+.service-container{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-container p{
+  margin-bottom:0.5vh;
+}
+.button {
+  margin-top:0;
+  width: clamp(60px, 26vw, 120px);
+  padding: clamp(0.4rem, 1vw, 0.6rem)
+           clamp(0.3rem, 3vw, 0.7rem);
+  border: 3px solid var(--dark-orange);
+  border-radius: clamp(2rem, 2vw, 3rem);
+  text-decoration: none;
+  color: var(--dark-orange);
+  font-family: var(--header-font);
+  font-size: clamp(20px, 3vw, 23px);
+  font-weight: var(--semi-bold);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: auto;
+  }
+
+  .carousel-button {
+    font-size: 1.5rem;
+    padding: 4px 10px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  
+  .feature-container{
+    flex-direction: column;
+  }
+
+  #download-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #download-details-container{
+    align-items: center;
+  }
+
+  #calculator-container, 
+  #planner-container, 
+  #nutrition-container, 
+  #nutritionist-container,
+  #community-container {
+    width: clamp(250px, 85vw, 1000px);
+    height: 300px;
+    justify-content: center;
+  }
+
+  .carousel-button{
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+
+    .inner-image-container{
+    flex-direction: column-reverse;
+  }
+}

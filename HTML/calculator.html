@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/nav-bar.css" />
+    <link rel="stylesheet" href="/CSS/calculator.css" />
+
+    <title>Calorie Calculator</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="left-items">
+        <a href="../index.html" class="nav-button">
+          <img
+            src="../IMAGES/ICONS/caloright-logo.png"
+            alt="Caloright"
+            id="logo"
+          />
+        </a>
+
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form"
+          >
+            <input
+              type="text"
+              id="search-input"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <!-- NAV SEARCH ICON INSERTED HERE -->
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- Suggestion Container -->
+          <div class="suggestion-container" id="suggestion-container">
+            <ul id="suggestions-list" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-items">
+        <a href="./HTML/project.html" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-menu.png" alt="Menu" />
+        </a>
+
+        <a href="#" class="nav-button" id="cart-button">
+          <img src="../IMAGES/ICONS/nav-cart.png" alt="Cart" />
+        </a>
+
+        <a href="#" class="nav-button">
+          <img src="../IMAGES/ICONS/nav-account.png" alt="Account" />
+        </a>
+
+        <button class="nav-button mobile-search-toggle" id="search-toggle">
+          <img src="../IMAGES/ICONS/nav-search.png" alt="Search" />
+        </button>
+
+        <button class="nav-button hamburger-button" id="menu-toggle">
+          <img src="../IMAGES/ICONS/nav-hamburger.png" alt="Menu" />
+        </button>
+      </div>
+    </nav>
+
+    <!--SLIDE MENU START-->
+    <nav class="slide-menu" id="menu">
+      <!-- Close button -->
+      <button class="close-button" id="close-menu">&times;</button>
+      <p>
+        No starving. <span style="color: #7d9e1a">Just Smart,</span
+        ><span style="color: #cc6100"> balanced meals.</span>
+      </p>
+      <ul>
+        <!-- MOBILE-ONLY ITEMS -->
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-account.png"
+              alt="Arrow icon"
+            />
+            Account
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-menu.png"
+              alt="Arrow icon"
+            />
+            Menu
+          </a>
+        </li>
+        <li class="mobile-only">
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-cart.png"
+              alt="Arrow icon"
+            />
+            Cart
+          </a>
+        </li>
+
+        <!-- ALL SCREEN ITEMS -->
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-calculator.png"
+              alt="Arrow icon"
+            />
+            Calorie Calculator
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutrition-basics.png"
+              alt="Arrow icon"
+            />
+            Nutrition Basics
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-right"
+              src="../IMAGES/ICONS/nav-nutritionist.png"
+              alt="Arrow icon"
+            />
+            Nutritionist
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--SLIDE MENU END-->
+
+    <!-- existing desktop block above… -->
+
+    <div class="search-background">
+      <nav class="search-nav-bar">
+        <div class="search-bar-container">
+          <form
+            action="/search"
+            method="GET"
+            class="search-form"
+            id="search-form-mobile"
+          >
+            <input
+              type="text"
+              id="search-input-mobile"
+              name="search"
+              placeholder="What are you craving today?"
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button type="submit" aria-label="Submit search">
+              <img src="../IMAGES/ICONS/nav-search.png" alt="search" />
+            </button>
+          </form>
+
+          <!-- MOBILE SUGGESTION Container -->
+          <div class="suggestion-container" id="suggestion-container-mobile">
+            <ul id="suggestions-list-mobile" class="suggestions-list"></ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--JAVA SCRIPT SECTION-->
+    <script src="../JS/nav-bar.js"></script>
+    <main>
+      <section class="banner" aria-label="Page banner">
+        <h1 class="banner-title">Calorie Calculator</h1>
+      </section>
+
+      <section
+        id="calculator-and-result-container"
+        aria-label="Calorie calculator and results"
+      >
+        <form
+          id="calculator-container"
+          aria-describedby="resultContainer"
+          onsubmit="event.preventDefault(); calculateCalories();"
+        >
+          <p class="calculator-title-text">CALORIE CALCULATOR</p>
+          <fieldset id="gender-container" aria-label="Select gender">
+            <legend>Gender</legend>
+            <button
+              type="button"
+              id="maleButton"
+              onclick="getGender('male')"
+              aria-pressed="false"
+            >
+              Male
+            </button>
+            <button
+              type="button"
+              id="femaleButton"
+              onclick="getGender('female')"
+              aria-pressed="false"
+            >
+              Female
+            </button>
+          </fieldset>
+
+          <fieldset id="data-container" aria-label="Enter your physical data">
+            <legend>Physical Data</legend>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Age"
+              min="0"
+              max="120"
+              maxlength="3"
+              required
+              aria-required="true"
+            />
+            <input
+              type="number"
+              id="height"
+              name="height"
+              placeholder="Height (cm)"
+              min="30"
+              max="300"
+              maxlength="3"
+              required
+              aria-required="true"
+            />
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              placeholder="Weight (kg)"
+              min="1"
+              max="500"
+              maxlength="3"
+              required
+              aria-required="true"
+            />
+          </fieldset>
+
+          <fieldset
+            class="dropdown-container"
+            aria-label="Select activity level"
+          >
+            <legend>Activity Level</legend>
+            <select
+              class="activity-dropdown"
+              id="activityLevelDropdown"
+              name="activity"
+              required
+              aria-required="true"
+              autocomplete="off"
+            >
+              <option value="" disabled selected>Select activity level</option>
+              <option value="1">Sedentary</option>
+              <option value="2">Lightly Active</option>
+              <option value="3">Moderately Active</option>
+              <option value="4">Very Active</option>
+              <option value="5">Extra Active</option>
+            </select>
+          </fieldset>
+
+          <div class="calculate-button">
+            <button type="submit" aria-label="Calculate calories">
+              Calculate
+            </button>
+          </div>
+        </form>
+
+        <section
+          class="result-container"
+          aria-live="polite"
+          aria-atomic="true"
+          tabindex="0"
+        >
+          <p class="result-title-text">RESULT</p>
+          <p class="result-body-text">
+            Note: The result will appear here once you&apos;ve successfully
+            submitted the necessary information.
+          </p>
+          <div id="result">
+            <p class="result-header">Maintain Weight:</p>
+            <p id="maintainWeight" class="result-body"></p>
+
+            <p class="result-header">Mild Weight Loss (0.25 kg/week):</p>
+            <p id="mildWeightLoss" class="result-body"></p>
+
+            <p class="result-header">Weight Loss (0.5 kg/week):</p>
+            <p id="normalWeightLoss" class="result-body"></p>
+
+            <p class="result-header" id="resultContainer">
+              Extreme Weight Loss (1 kg/week):
+            </p>
+            <p id="extremeWeightLoss" class="result-body"></p>
+          </div>
+        </section>
+      </section>
+
+      <p id="text-display">
+        Donuts don't make you
+        <span style="color: #cc6100">gain weight.</span>
+        <span style="color: #7d9e1a; font-weight: 600"
+          >Excess calories do!</span
+        >
+      </p>
+    </main>
+
+    <script src="/JS/calculator.js"></script>
+    <script src="/JS/nav-bar.js"></script>
+  </body>
+</html>
