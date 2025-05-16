@@ -354,6 +354,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4vh;
+}
+
+.service-container a:hover{
+  background-color: var(--dark-orange);
+  color: var(--white);
 }
 
 .service-container p{
