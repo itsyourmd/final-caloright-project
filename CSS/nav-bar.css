@@ -20,6 +20,15 @@ body {
   background-color: var(--white);
 }
 
+/* Prevent mobile tap highlight and focus ring */
+button, a {
+  -webkit-tap-highlight-color: transparent; /* Removes gray highlight on iOS/Android */
+  -webkit-touch-callout: none; /* Disables long-press context menu */
+  user-select: none; /* Prevents text selection */
+  outline: none; /* Removes focus ring (be careful for accessibility) */
+}
+
+
 /* =============== NAVIGATION =============== */
 .nav-container {
   display: flex;
